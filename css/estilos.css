@@ -4,37 +4,25 @@
     box-sizing: border-box;
 }
 
-.grilla {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 0.5fr;
-    grid-template-rows: 1fr 5fr 0.8fr;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    justify-content: stretch;
-    align-content: stretch;
-    justify-items: stretch;
-    align-items: stretch;
-    grid-template-areas:
-        "header header header header"
-        "main main main aside"
-        "footer footer footer footer";
+.fuente{
+    font-family: 'Merriweather', serif;
 }
 
 .aside {
-    grid-area: aside;
     background-color: #406882;
 }
 
 .main {
-    grid-area: main;
     background-color: #406882;
 }
 
+.mainE{
+    height: 450px;
+}
+
 .header {
-    grid-area: header;
     background-color: #1A374D;
+    height: 200px
 }
 
 .header:hover {
@@ -42,12 +30,8 @@
 }
 
 .footer {
-    grid-area: footer;
-    display: flex;
     background-color: #1A374D;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
+    height:100px
 }
 
 .footer:hover {
@@ -79,14 +63,6 @@ a {
     border: 4px;
 }
 
-.textoCentro {
-    text-align: center;
-}
-
-.textoDerecha {
-    text-align: right;
-}
-
 .texto {
     font-size: 20px;
     border: 4px
@@ -102,23 +78,21 @@ a {
     margin: 2%;
 }
 
+.logoF{
+    width: 70%;
+}
+
+.logoF:hover{
+    width: 100%;
+    transition: 1s;
+}
+
 .borde {
     border: 3px solid;
     margin: 2px;
     padding: 2px;
     list-style-type: none;
     color: #B1D0E0;
-}
-
-.flex1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.flex2 {
-    display: flex;
-    flex-direction: column;
 }
 
 .link {
@@ -132,7 +106,12 @@ a {
 .rotate:hover {
     background-color: #406882;
     color: violet;
-    transform: rotate(20deg);
+    transform: rotate(5deg);
+    transition: 1s;
+}
+
+.link2:hover{
+    border: 3px solid;
     transition: 1s;
 }
 
@@ -145,58 +124,42 @@ a {
     width: 46%;
 }
 
-
-.redes {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-
 .barraPublicidad{
     background-color: blanchedalmond;
     border: solid 2px;
     font-size: 20px;
     padding: 10%;
-    height: 80%;
+    height: 90%;
     justify-self: auto;
     font-weight: bold;
     margin: 10%;
 }
 
 @media (max-width: 425px) {
-    .grilla {display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 3fr 3fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "header header header"
-      "main main aside"
-      "main main aside"
-      "footer footer footer"; 
-}
 
 .aside {
-    grid-area: aside;
     background-image: linear-gradient(0.25turn,#3D0000, #950101);
 }
 
 .main {
-    grid-area: main;
     background-color: #3D0000;
 }
 
 .header {
-    grid-area: header;
     background-color: #000000;
 }
 
 .footer {
-    grid-area: footer;
-    display: flex;
     background-color: #950101;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
+}
+
+.logoF{
+    width: 200%;
+}
+
+.logoF:hover{
+    width: 300%;
+    transition: 1s;
 }
 
 .negritaGrande{
@@ -230,19 +193,6 @@ a {
     justify-self: center;
     font-weight: bold;
     margin: 7%;
-}
-
-.flex1{
-    flex-wrap: wrap;
-    align-content: center;
-}
-
-.centro{
-    flex-direction: column;
-}
-
-.redes{
-    display: flex;
 }
 
 }
