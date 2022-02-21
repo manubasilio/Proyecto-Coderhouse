@@ -1,0 +1,23 @@
+$font-sizes: (h1: 100px,
+);
+
+@each $etiqueta,
+$tamanio in $font-sizes {
+    #{$etiqueta} {
+        font-size: $tamanio;
+    }
+}
+
+$historia: (
+    cleopatrick: black,
+    band: rgb(8, 8, 133),
+    cd: rgb(204, 206, 80),
+    song: white,
+    letra: rgb(137, 212, 137));
+
+@each $frases, $color in $historia {
+    .#{$frases}{
+        color: $color;
+        font-weight: bold;
+    }
+}
